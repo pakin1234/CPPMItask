@@ -19,10 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="arc.cpp" />
+    <ClCompile Include="basepoint.cpp" />
+    <ClCompile Include="line.cpp" />
     <ClCompile Include="Task5proto.cpp" />
     <ClCompile Include="VSTUB.CPP" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arc.h" />
+    <ClInclude Include="basepoint.h" />
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="Vect.h" />
     <ClInclude Include="VSTUB.H" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

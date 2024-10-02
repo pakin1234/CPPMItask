@@ -1,40 +1,46 @@
 #include <time.h>
 #include "vstub.h"
+#include "Line.h"
+#include "Arc.h"
+#include "basepoint.h"
+#include "Vect.h"
+
+// draw(true) - paint figure
+// draw(false) - delete figure
 
 namespace std{
 
 int main(void){
-    time_t t=clock();
-  drawgrid();
-  vc<< "Hello!\n";
+	drawgrid();
+	
+	int x0 = 1;
+	int y0 = 2;
 
-  setcolor (255,255,255);
-	for (int i=0; i<400; i++) 
+	Line line1(100, 200, 300, 400, x0, y0, 255, 255, 0);
+	Arca arc1(100, 200, 20, 0, 10, x0, y0, 255, 150, 0);
+
+	
+
+	Vector<BasePoint*> figure;
+	figure.push_back(&arc1);
+	figure.push_back(&line1);
+
+	for (size_t i = 0; i < figure.get_number_elements(); i++)
 	{
-		putpixel(i, 400-i);
+		figure[i]->draw(true);
+		vgetchar();
 	}
-  vgetchar();
 
-  setcolor (0,255,255);
-	putline (0,0,400,400);
-  vc << "The time is: " << 123.456 << " and\nthis\n is\n  it!";
-  vgetchar();
 
-  setcolor (255,0,255);
-  putarc (100,100,50,1.5,2.5);
-  vgetchar();
+	for (size_t i = 0; i < figure.get_number_elements(); i++)
+	{
+		figure[i]->move(4, 100);
+		vgetchar();
+	}
 
-  setcolor (0,0,0);
-  putarc (100,100,50,1.5,2.5);
-  vgetchar();
-
-  setcolor (255,0,255);
-  putarc (120,120,50,1.5,2.5);
-  vc << "\nTime diff is : " << clock()-t;
-  vgetchar();
-  return 0;
+	vgetchar();
+	return 0;
 }
-
 }
 
 
