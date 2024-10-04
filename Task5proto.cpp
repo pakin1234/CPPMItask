@@ -4,6 +4,7 @@
 #include "Arc.h"
 #include "basepoint.h"
 #include "Vect.h"
+#include "Sector.h"
 
 // draw(true) - paint figure
 // draw(false) - delete figure
@@ -11,35 +12,60 @@
 namespace std{
 
 int main(void){
-	drawgrid();
-	
-	int x0 = 1;
-	int y0 = 2;
+	int center_x = 150;   // Координаты центра дуги
+	int center_y = 200;
+	int radius = 50;      // Радиус дуги
+	float startAngle = 0; // Начальный угол
+	float sweepAngle = 90; // Угол дуги
+	int x1 = 100;         // Концы линии
+	int y1 = 250;
+	int x2 = 200;
+	int y2 = 250;
+	int objectNumber = 1; // Номер объекта
+	int x0 = 0;           // Начальные координаты для BasePoint
+	int y0 = 0;
+	int r = 255;          // Цвет (RGB)
+	int g = 0;
+	int b = 0;
 
-	Line line1(100, 200, 300, 400, x0, y0, 255, 255, 0);
-	Arca arc1(100, 200, 20, 0, 10, x0, y0, 255, 150, 0);
+	// Создаем объект сектора
+	Sector sector(x1, y1, x2, y2, center_x, center_y, radius, startAngle, sweepAngle, x0, y0, r, g, b);
 
-	
+	// Рисуем сектор
+	sector.draw(true); // Передаем true для рисования
 
-	Vector<BasePoint*> figure;
-	figure.push_back(&arc1);
-	figure.push_back(&line1);
+	// Перемещаем сектор
+	sector.move(10, 20); // Сдвигаем сектор на (10, 20)
 
-	for (size_t i = 0; i < figure.get_number_elements(); i++)
-	{
-		figure[i]->draw(true);
-		vgetchar();
-	}
+	//drawgrid();
+	//
+	//int x0 = 1;
+	//int y0 = 2;
+
+	//Line line1(100, 200, 300, 400, x0, y0, 255, 255, 0);
+	//Arca arc1(100, 200, 20, 0, 10, x0, y0, 255, 150, 0);
+
+	//
+
+	//Vector<BasePoint*> figure;
+	//figure.push_back(&arc1);
+	//figure.push_back(&line1);
+
+	//for (size_t i = 0; i < figure.get_number_elements(); i++)
+	//{
+	//	figure[i]->draw(true);
+	//	vgetchar();
+	//}
 
 
-	for (size_t i = 0; i < figure.get_number_elements(); i++)
-	{
-		figure[i]->move(4, 100);
-		vgetchar();
-	}
+	//for (size_t i = 0; i < figure.get_number_elements(); i++)
+	//{
+	//	figure[i]->move(4, 100);
+	//	vgetchar();
+	//}
 
-	vgetchar();
-	return 0;
+	//vgetchar();
+	//return 0;
 }
 }
 
