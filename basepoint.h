@@ -1,4 +1,7 @@
 #pragma once
+// draw(true) - paint figure
+// draw(false) - delete figure
+
 class BasePoint
 {
 protected:
