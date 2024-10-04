@@ -11,3 +11,5 @@ public:
 	virtual void draw(bool flag) = 0;
 	void move(int dx, int dy);
 };
+
+
