@@ -14,7 +14,7 @@ int main(void){
 	drawgrid();
 	
 	int x0 = 100;
-	int y0 = 2;
+	int y0 = 0;
 
 	Line line1(100, 200, 300, 400, x0, y0, 255, 150, 0);
 	Arca arc1(100, 200, 20, 0, 10, x0, y0, 255, 150, 0);
