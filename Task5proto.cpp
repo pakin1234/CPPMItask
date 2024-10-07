@@ -12,11 +12,13 @@
 namespace std{
 
 int main(void){
+	drawgrid();
+
 	int center_x = 150;   // Координаты центра дуги
-	int center_y = 200;
+	int center_y = 250;
 	int radius = 50;      // Радиус дуги
-	float startAngle = 0; // Начальный угол
-	float sweepAngle = 90; // Угол дуги
+	float startAngle = 90; // Начальный угол
+	float sweepAngle = 180; // Угол дуги
 	int x1 = 100;         // Концы линии
 	int y1 = 250;
 	int x2 = 200;
@@ -30,12 +32,15 @@ int main(void){
 
 	// Создаем объект сектора
 	Sector sector(x1, y1, x2, y2, center_x, center_y, radius, startAngle, sweepAngle, x0, y0, r, g, b);
+	vgetchar();
 
 	// Рисуем сектор
-	sector.draw(true); // Передаем true для рисования
+	sector.draw_sector(true); // Передаем true для рисования
+	vgetchar();
 
 	// Перемещаем сектор
-	sector.move(10, 20); // Сдвигаем сектор на (10, 20)
+	sector.move(50, 50); // Сдвигаем сектор на (10, 20)
+	vgetchar();
 
 	//drawgrid();
 	//
@@ -65,7 +70,7 @@ int main(void){
 	//}
 
 	//vgetchar();
-	//return 0;
+	return 0;
 }
 }
 

@@ -13,6 +13,6 @@ public:
 		Arca(xc, yc, radius, a1, a2, x0, y0, r, g, b),
 		Object() {}
 
-	void draw(bool flag);
+	void draw_sector(bool flag);
 	void move(int dx, int dy);
 };

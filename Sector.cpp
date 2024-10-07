@@ -4,12 +4,12 @@
 #include "VSTUB.H"
 #include "Sector.h"
 
-void Sector::draw(bool flag) {
+void Sector::draw_sector(bool flag) {
 	Line::draw(flag);
 	Arca::draw(flag);
 }
 
 void Sector::move(int dx, int dy) {
-	Line::move(dx, dy);
 	Arca::move(dx, dy);
+	Line::move(dx, dy);
 }
