@@ -1,6 +1,3 @@
-//#include "OLine.h"
-//#include "OArc.h"
-#include "Object.h"
 #include "VSTUB.H"
 #include "Sector.h"
 

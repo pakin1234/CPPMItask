@@ -19,22 +19,10 @@ int main(void){
 
 	drawgrid();
 
-	int center_x = 150; 
-	int center_y = 250;
-	int radius = 50;     
-	float startAngle = 0; 
-	float sweepAngle = 3.17;
-	int x1 = 100;
-	int y1 = 250;
-	int x2 = 200;
-	int y2 = 250;
-	int x0 = 0;        
-	int y0 = 0;
-	int r = 255;         
-	int g = 0;
-	int b = 0;
+	int x0 = 1;
+	int y0 = 2;
 
-	Sector sector(x1, y1, x2, y2, center_x, center_y, radius, startAngle, sweepAngle, x0, y0, r, g, b);
+	Sector sector(100, 200, 50, 0, 2, x0, y0, 255, 255, 0);
 	vgetchar();
 
 	sector.draw_sector(true);
@@ -43,7 +31,7 @@ int main(void){
 	sector.move(50, 50);
 	vgetchar();
 
-	CompositeShape segment(50, 50, 100, 100, 100, 40, 100, 100, 75, 50, 25, 0, 3.14, 0, 0, 255, 0, 0);
+	CompositeShape segment(200, 300, 50, 0, 2, 1, 2, 0, 255, 200);
 	vgetchar();
 
 	segment.draw_shape(true);

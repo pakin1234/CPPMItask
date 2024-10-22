@@ -4,7 +4,7 @@
 
 
 class Arca: public BasePoint {
-private:
+protected:
 	int center_x, center_y;
 	int radius;
 	float startAngle, sweepAngle;
