@@ -24,6 +24,7 @@ private:
 		data = new_data;
 		capacity = new_capacity;
 	}
+
 public:
 	Vector() : data(nullptr), number_elements(0), capacity(0) {};
 

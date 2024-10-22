@@ -1,15 +1,10 @@
 #include "Vect.h"
 #include "Object.h"
+#include "VSTUB.H"
 
 // initialization of static element of class
-Vector<int> Object::objectsNumber = {};
+int Object::NumberCount = 1;
 
-Object::Object()
-{
-	number = objectsNumber.get_number_elements() + 1;
-	objectsNumber.push_back(number);
-}
-
-void Object::printObjectsNumber() {
-	objectsNumber.print_vector();
+Object::Object(){
+	numb = NumberCount + 1;
 }

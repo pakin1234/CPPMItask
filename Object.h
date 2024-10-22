@@ -5,11 +5,11 @@
 class Object
 {
 private:
-	int number;
-	static Vector<int> objectsNumber;
+	int numb;
+	static int NumberCount;
 public:
 	Object();
-	static void printObjectsNumber();
+	virtual const char* who() = 0;
 };
 
 
