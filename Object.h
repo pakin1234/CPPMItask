@@ -1,6 +1,4 @@
 #pragma once
-#include "Vect.h"
-
 
 class Object
 {

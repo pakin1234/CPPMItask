@@ -5,7 +5,7 @@
 #include "basepoint.h"
 #include "Vect.h"
 #include "Sector.h"
-#include "CompositeShape.h"
+#include "Segment.h"
 #include "Object.h"
 
 // draw(true) - paint figure
@@ -19,30 +19,42 @@ int main(void){
 
 	drawgrid();
 
-	int x0 = 1;
-	int y0 = 2;
+	int x0 = 100;
+	int y0 = 0;
+
+	Line line1(100, 200, 300, 400, x0, y0, 255, 150, 0);
+	Arca arc1(100, 200, 20, 0, 10, x0, y0, 255, 150, 0);
 
 	Sector sector(100, 200, 50, 0, 2, x0, y0, 255, 255, 0);
-	vgetchar();
+	BasePoint* segment = new Segment(200, 300, 50, 0, 2, x0, y0, 0, 255, 200);
 
-	sector.draw_sector(true);
-	vgetchar();
+	Vector<BasePoint*> figures;
+	figures.push_back(&sector);
+	figures.push_back(&arc1);
+	figures.push_back(&line1);
+	figures.push_back(segment);
 
-	sector.move(50, 50);
-	vgetchar();
+	for (size_t i = 0; i < figures.get_number_elements(); i++)
+	{
+		figures[i]->draw(true);
+		vgetchar();
+	}
 
-	CompositeShape segment(200, 300, 50, 0, 2, 1, 2, 0, 255, 200);
-	vgetchar();
+	for (size_t i = 0; i < figures.get_number_elements() - 1; i++)
+	{
+		figures[i]->move(50, 50);
+		vgetchar();
+	}
 
-	segment.draw_shape(true);
-	vgetchar();
+	if (Object* object = dynamic_cast<Object*>(segment))
+	{
+		const char* who = object->who();
 
-	segment.move(50, 50);
-	vgetchar();
-
-	const char* segment_who = segment.who();
-	vc << segment_who;
-	vgetchar();
+		vc << who;
+		vgetchar();
+		segment->move(20, 20);
+		vgetchar();
+	}
 
 	return 0;
 }

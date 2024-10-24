@@ -1,14 +1,14 @@
 #include "VSTUB.H"
 #include "Sector.h"
 
-void Sector::draw_sector(bool flag) {
-	OLine::draw(flag);
-	OArc::draw(flag);
+void Sector::draw(bool flag) {
+	Line::draw(flag);
+	Arca::draw(flag);
 }
 
 void Sector::move(int dx, int dy) {
-	OArc::move(dx, dy);
-	OLine::move(dx, dy);
+	Arca::move(dx, dy);
+	Line::move(dx, dy);
 }
 
 const char* Sector::who() {

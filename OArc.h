@@ -2,7 +2,7 @@
 #include "Arc.h"
 #include "Object.h"
 
-class OArc : public Arca, public Object {
+class OArc : public Arca, public Object, public BasePoint {
 public:
 	OArc() {};
 
