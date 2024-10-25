@@ -4,7 +4,7 @@
 #include "Object.h"
 
 
-class Arca: public virtual BasePoint, public virtual Object {
+class Arca: public virtual BasePoint {
 protected:
 	int center_x, center_y;
 	int radius;
@@ -17,6 +17,4 @@ public:
 
 
 	void draw(bool flag);
-
-	const char* who();
 };

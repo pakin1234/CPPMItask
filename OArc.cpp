@@ -1,5 +1,9 @@
 #include "OArc.h"
 
-const char* OArc::who() {
+const char* OArca::who() {
 	return "OArc";
+}
+
+void OArca::draw(bool flag) {
+	Arca::draw(flag);
 }

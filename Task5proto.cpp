@@ -1,7 +1,7 @@
 #include <time.h>
 #include "vstub.h"
-#include "Line.h"
-#include "Arc.h"
+#include "OLine.h"
+#include "OArc.h"
 #include "basepoint.h"
 #include "Vect.h"
 #include "Sector.h"
@@ -22,8 +22,8 @@ int main(void){
 	int x0 = 100;
 	int y0 = 0;
 
-	Line line1(100, 200, 300, 400, x0, y0, 255, 150, 0);
-	Arca arc1(100, 200, 20, 0, 10, x0, y0, 255, 150, 0);
+	OLine line1(100, 200, 300, 400, x0, y0, 255, 150, 0);
+	OArca arc1(100, 200, 20, 0, 10, x0, y0, 255, 150, 0);
 	Sector sector(100, 200, 50, 0, 2, x0, y0, 255, 150, 0);
 	Segment segment(200, 300, 50, 0, 2, x0, y0, 255, 150, 0);
 

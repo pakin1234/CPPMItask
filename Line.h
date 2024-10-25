@@ -1,10 +1,9 @@
 #pragma once
 #include "basepoint.h"
 #include "VSTUB.H"
-#include "Object.h"
 
 
-class Line : public virtual BasePoint, public virtual Object {
+class Line : public virtual BasePoint {
 protected:
 	int x1, y1, x2, y2;
 public:
@@ -13,5 +12,4 @@ public:
 		x1(x1), y1(y1), x2(x2), y2(y2), BasePoint(x0, y0, r, g, b) {}
 
 	void draw(bool flag);
-	const char* who();
 };

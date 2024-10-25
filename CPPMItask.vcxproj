@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClCompile Include="arc.cpp" />
     <ClCompile Include="basepoint.cpp" />
+    <ClCompile Include="OArc.cpp" />
+    <ClCompile Include="OLine.cpp" />
     <ClCompile Include="Segment.cpp" />
     <ClCompile Include="line.cpp" />
     <ClCompile Include="Object.cpp" />
@@ -31,6 +33,8 @@
   <ItemGroup>
     <ClInclude Include="Arc.h" />
     <ClInclude Include="basepoint.h" />
+    <ClInclude Include="OArc.h" />
+    <ClInclude Include="OLine.h" />
     <ClInclude Include="Segment.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Object.h" />
