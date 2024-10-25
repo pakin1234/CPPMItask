@@ -8,6 +8,10 @@ private:
 public:
 	Object();
 	virtual const char* who() = 0;
+
+	int get_number()const {
+		return numb;
+	}
 };
 
 

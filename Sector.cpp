@@ -12,5 +12,5 @@ void Sector::move(int dx, int dy) {
 }
 
 const char* Sector::who() {
-	return "OSector";
+	return "Sector";
 }

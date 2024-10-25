@@ -20,5 +20,5 @@ void Arca::draw(bool flag) {
 }
 
 const char* Arca::who() {
-	return "OSector";
+	return "Arca";
 }

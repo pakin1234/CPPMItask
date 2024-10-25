@@ -13,8 +13,7 @@ public:
 		BasePoint(x0, y0, r, g, b),
 		arc(xc, yc, radius, a1, a2, x0, y0, r, g, b),
 		line1(xc, yc, xc + radius * cos(a1), yc - radius * sin(a1), x0, y0, r, g, b),
-		line2(xc, yc, xc + radius * cos(a2), yc - radius * sin(a2), x0, y0, r, g, b), 
-		Object() {};
+		line2(xc, yc, xc + radius * cos(a2), yc - radius * sin(a2), x0, y0, r, g, b) {}
 
 	void draw(bool flag);
 	void move(int dx, int dy);

@@ -4,5 +4,9 @@
 int Object::NumberCount = 1;
 
 Object::Object(){
-	numb = NumberCount + 1;
+	numb = NumberCount++;
 }
+
+//int Object::get_number() {
+//	return numb;
+//}

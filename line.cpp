@@ -20,5 +20,5 @@ void Line::draw(bool flag) {
 }
 
 const char* Line::who() {
-	return "OSector";
+	return "Line";
 }
