@@ -17,4 +17,6 @@ void Arca::draw(bool flag) {
 	}
 	std::setcolor(red, green, blue);
 	std::drawarc(center_x + x0, center_y + y0, radius, startAngle, sweepAngle);
+	Sleep(5);
+
 }

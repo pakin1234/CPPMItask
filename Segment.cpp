@@ -2,16 +2,14 @@
 #include "Segment.h"
 
 void Segment::draw(bool flag) {
-	arc.draw(flag);
-	line1.draw(flag);
-	line2.draw(flag);
+	Line::draw(flag);
+	Arca::draw(flag);
 }
 
-void Segment::move(int dx, int dy) {
-	arc.move(dx, dy);
-	line1.move(dx, dy);
-	line2.move(dx, dy);
-}
+//void Segment::move(int dx, int dy) {
+//	Arca::move(dx, dy);
+//	Line::move(dx, dy);
+//}
 
 const char* Segment::who() {
 	return "Segment";

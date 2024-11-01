@@ -17,4 +17,5 @@ void Line::draw(bool flag) {
 	}
 	std::setcolor(red, green, blue);
 	std::drawline(x1 + x0, y1 + y0, x2 + x0, y2 + y0);
+	Sleep(5);
 }
